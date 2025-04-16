@@ -11,7 +11,7 @@ import shutil
 
 # إعدادات الأساسية
 BOT_TOKEN = '7809842301:AAHyLkq_AvC0bR_Pdh8eZNs12r63YRnCtBg'
-MAIN_DIR = os.path.expanduser("~/telegram_bot/")  # سيحول ~ إلى المسار الكامل
+MAIN_DIR = os.path.expanduser("~/root/telegram_bot/")  # سيحول ~ إلى المسار الكامل
 UPLOAD_DIR = os.path.join(MAIN_DIR, "uploads")
 
 if not os.path.exists(MAIN_DIR):
