@@ -11,13 +11,13 @@ import shutil
 
 # إعدادات الأساسية
 BOT_TOKEN = '7809842301:AAHyLkq_AvC0bR_Pdh8eZNs12r63YRnCtBg'
-MAIN_DIR = "~/telegram_bot/"
+MAIN_DIR = os.path.expanduser("~/telegram_bot/")  # سيحول ~ إلى المسار الكامل
 UPLOAD_DIR = os.path.join(MAIN_DIR, "uploads")
 
 if not os.path.exists(MAIN_DIR):
-    os.makedirs(MAIN_DIR)
+    os.makedirs(MAIN_DIR, exist_ok=True)  # exist_ok=True لتجنب الأخطاء إذا المجلد موجود
 if not os.path.exists(UPLOAD_DIR):
-    os.makedirs(UPLOAD_DIR)
+    os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
